@@ -1,0 +1,44 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+<div class="form-froup row" style="width: 60%;">
+
+  <label class="col-sm-2 col-form-label"> Nome do Projeto</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" [(ngModel)]="ProjectName"
+    placeholder="Entre com o nome do Projeto">
+  </div>
+
+  <label class="col-sm-2 col-form-label">Data de Início</label>
+    <div class="col-sm-10">
+        <input type="date"  [(ngModel)]="ProjectBegin">
+    </div>
+
+  <label class="col-sm-2 col-form-label">Data de Término</label>
+    <div class="col-sm-10">
+        <input type="date"  [(ngModel)]="ProjectEnd">
+    </div>
+
+  <label class="col-sm-2 col-form-label"> Valor do Projeto</label>
+    <div class="col-sm-10">
+      <input type="float" class="form-control" [(ngModel)]="ProjectValue"
+      placeholder="Entre com o valor do Projeto">
+    </div>
+
+  <label class="col-sm-2 col-form-label"> Risco do Projeto</label>
+    <div class="col-sm-10">
+      <input type="integer" class="form-control" [(ngModel)]="ProjectRisk"
+      placeholder="Entre com o risco do Projeto">
+    </div>
+
+  <label class="col-sm-2 col-form-label"> Participantes do Projeto </label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="ProjectPeople"
+      placeholder="Digite o nome dos participantes separados por ;">
+    </div>
+
+<button (click)="addProject()" *ngIf="proj.ProjectID==0" class="btn btn-primary">
+  Add
+</button>
+
+<button (click)="updateProject()" *ngIf="proj.ProjectID!=0" class="btn btn-primary">
+  Update
+</button>
