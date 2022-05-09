@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+// Setando o Angular para consumir os dados da API criada
 @Injectable({
   providedIn: 'root'
 })
